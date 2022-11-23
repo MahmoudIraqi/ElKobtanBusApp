@@ -215,9 +215,13 @@ export class BookTicketComponent implements OnInit, AfterViewInit {
   onSubmit() {
     console.log('bookTicketForm', this.bookTicketForm);
 
-    // this.http.post('/mail.php', {username: 'hamada'}).subscribe((res: any) => {
-    //   console.log('res', res)
-    // });
+    if (this.activatedTab) {
+      this.http.post('./oneWayMail.php', this.bookTicketForm.value.oneWay).subscribe((res: any) => {
+      });
+    } else if (!this.activatedTab && this.activatedTab !== undefined) {
+      this.http.post('./returningTripMail.php', this.bookTicketForm.value.roundWay).subscribe((res: any) => {
+      });
+    }
   }
 
   setTabSelected(event: any) {
