@@ -1,0 +1,37 @@
+{
+  "lang": {
+    "ar": "Ar",
+    "en": "En"
+  },
+  "common": {
+    "login": "Login"
+  },
+  "bookTicket": {
+    "link": "Book Ticket",
+    "modalTitle": "Book Ticket",
+    "form": {
+      "customerName": "Name",
+      "customerPhoneNumber": "Phone number",
+      "fromDate": "From",
+      "toDate": "To",
+      "departureDate": "Departure date",
+      "departureTime": "Departure time",
+      "returnDate": "Return date",
+      "returnTime": "Return time",
+      "passenger": "Passenger",
+      "selectOption": "Please select options",
+      "submit": "Submit",
+      "close": "Close"
+    },
+    "tabs": {
+      "oneWay": {
+        "en": "One way",
+        "ar": "وجهة واحدة"
+      },
+      "roundWay": {
+        "en": "Round way",
+        "ar": "ذهاب و عودة"
+      }
+    }
+  }
+}

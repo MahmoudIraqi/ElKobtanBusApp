@@ -1,0 +1,31 @@
+{
+  "lang": {
+    "ar": "عربي",
+    "en": "انجليزي"
+  },
+  "common": {
+    "login": "تسجيل الدخول"
+  },
+  "bookTicket": {
+    "link": "حجز التذاكر",
+    "modalTitle": "حجز التذاكر",
+    "form": {
+      "customerName": "ألاسم",
+      "customerPhoneNumber": "رقم الموبايل",
+      "fromDate": "سفر من",
+      "toDate": "الوصول الي",
+      "departureDate": "تاريخ السفر",
+      "departureTime": "الوقت المناسب للسفر",
+      "returnDate": "تاريخ العودة",
+      "returnTime": "الوقت المناسب للعودة",
+      "passenger": "عدد الركاب",
+      "selectOption": "اختر المناسب",
+      "submit": "احجز",
+      "close": "اغلاق"
+    },
+    "tabs": {
+      "oneWay": "وجهة واحدة",
+      "roundWay": "ذهاب و عودة"
+    }
+  }
+}

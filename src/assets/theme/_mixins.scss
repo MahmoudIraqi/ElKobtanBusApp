@@ -1,0 +1,15 @@
+@mixin --colFlex-centerStart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+@mixin --colFlex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@mixin transition($property: all, $time) {
+  // transition: $property $time ease-in-out;
+}

@@ -1,0 +1,22 @@
+@import "./../../../assets/theme/default_theme.scss";
+
+.bookBtn {
+  position: fixed;
+  top: calc(50vh - 20px);
+  right: 0;
+  z-index: 250;
+  border-radius: 0.8rem 0 0 0.8rem !important;
+  color: $main_color;
+  background: $white;
+  border-color: $white;
+  font-weight: bolder;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.bookBtn:hover {
+  color: $white;
+  background: $main_color;
+  border-color: $main_color;
+  box-shadow: 0px 0px 10px $white;
+}

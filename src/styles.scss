@@ -1,1 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/theme/default_theme";
+@import "./assets/theme/scrollingBar";
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+input,
+button,
+select {
+  border-radius: 0.8rem !important;
+}
+
+input:focus, select:focus {
+  outline: none !important;
+  border: 1px solid $black !important;
+  box-shadow: none !important;
+}
+
+.modal-content {
+  top: calc((100vh - 640px) / 2);
+  padding: 2rem 1rem;
+  position: relative;
+
+  .modal-header {
+    border: none;
+    color: $black;
+    padding: 2px;
+
+    button {
+      background: none;
+      border: none;
+      outline: none;
+      padding: 0px;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-weight: bolder;
+      color: $black;
+    }
+
+    button:focus {
+      box-shadow: none;
+    }
+  }
+
+  .form-group {
+    label {
+      color: $black !important;
+    }
+  }
+
+  .btn-primary {
+    background: $main_color;
+    border-color: $main_color;
+  }
+
+  .btn-secondary {
+    background: $white;
+    border-color: $main_color;
+    color: $main_color;
+  }
+}

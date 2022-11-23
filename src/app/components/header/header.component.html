@@ -1,0 +1,28 @@
+<div class="headerContainer">
+  <div class="container">
+    <div class="row m-0 d-flex align-items-center">
+      <div class="col-lg-2 col-md-4 col-sm-12">
+        <div class="logo">
+          <img src="assets/img/logo.png" routerLink="/">
+        </div>
+      </div>
+      <div class="col-lg-10 col-md-8 col-sm-12">
+        <div class="rightSection d-flex align-items-center">
+          <div class="{{currentLang === 'ar' ? 'mr-auto':'ml-auto'}}">
+            <div class="d-flex align-items-center">
+              <select class="form-control mx-3" (change)="translateSite($event)">
+                <option value="ar">{{'lang.ar' | translate}}</option>
+                <option selected value="en">{{'lang.en' | translate}}</option>
+              </select>
+              <a (click)="navigateForLogin()">
+                {{'common.login' | translate}}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

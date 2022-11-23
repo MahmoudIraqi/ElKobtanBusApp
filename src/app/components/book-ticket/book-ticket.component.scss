@@ -1,0 +1,46 @@
+@import "./../../../assets/theme/default_theme.scss";
+
+.form-group {
+  label {
+    color: $black;
+  }
+}
+
+.pillsContainer {
+  width: 100%;
+  border: 2px solid $main_color;
+  padding: 1rem 0px;
+  margin-top: 1rem;
+  border-radius: 0.8rem;
+
+  .form-group {
+    label {
+      color: $white;
+    }
+  }
+}
+
+.nav-item {
+  margin: 0 10px;
+  border-radius: 0.6rem;
+
+  .nav-link {
+    background: $white;
+    color: $main_color;
+    border-radius: 0.6rem;
+    border: 1px solid $main_color;
+
+    &.active {
+      background: $main_color;
+      color: $white;
+    }
+  }
+}
+
+.tab-content {
+  .form-group {
+    label {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

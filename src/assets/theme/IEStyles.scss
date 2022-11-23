@@ -1,0 +1,14 @@
+
+/**** Custom IE Styles for IE 11 & edge ****/
+
+//IE 11
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+
+
+}
+
+//IE Edge
+@supports (-ms-ime-align:auto) {
+
+
+}

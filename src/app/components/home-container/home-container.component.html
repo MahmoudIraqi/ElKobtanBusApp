@@ -1,0 +1,27 @@
+<div class="appContainer" [dir]="currentLanguage === 'ar' ? 'rtl' : 'ltr'">
+  <app-header (selectedLanguage)="changeLang($event)"></app-header>
+
+  <button class="btn btn-primary bookBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <span><i class="bi bi-bookmarks"></i></span>
+    {{'bookTicket.link' | translate}}
+  </button>
+
+  <div class="sectionContainer">
+    <div class="whiteContainer">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+      </div>
+      <div class="modal-body">
+        <app-book-ticket></app-book-ticket>
+      </div>
+    </div>
+  </div>
+</div>
