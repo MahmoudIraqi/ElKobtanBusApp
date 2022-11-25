@@ -24,7 +24,8 @@
   $body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
   $body .= "<table style='width: 100%;'>";
   $body .= "<tbody><tr>";
-  $body .= "<td style='border:none;'><strong>Name:</strong> {$customerName}</td></tr>";
+  $body .= "<td style='border:none;'><strong>Transportation:</strong> {$busType}</td></tr>";
+  $body .= "<tr><td style='border:none;'><strong>Name:</strong> {$customerName}</td></tr>";
   $body .= "<tr><td style='border:none;'><strong>Phone number:</strong> {$customerPhoneNumber}</td></tr>";
   $body .= "<tr><td style='border:none;'><strong>Departure Time:</strong> {$time}</td></tr>";
   $body .= "<tr><td style='border:none;'><strong>Returning Time:</strong> {$returnTime}</td></tr>";
