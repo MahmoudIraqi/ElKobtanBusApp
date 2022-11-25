@@ -20,7 +20,7 @@ export class HomepageComponent implements OnInit {
       }
     },
     {
-      imgPath: "assets/img/slider1.jpeg",
+      imgPath: "assets/img/slider2.jpeg",
       imgTitle: {
         en: 'second slide label',
         ar: ''
@@ -31,7 +31,7 @@ export class HomepageComponent implements OnInit {
       }
     },
     {
-      imgPath: "assets/img/slider1.jpeg",
+      imgPath: "assets/img/slider3.jpeg",
       imgTitle: {
         en: 'third slide label',
         ar: ''

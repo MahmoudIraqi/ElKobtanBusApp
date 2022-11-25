@@ -2,10 +2,10 @@
 
 .bookBtn {
   position: fixed;
-  top: calc(50vh - 20px);
-  right: 0;
+  top: 30px;
+  right: calc((100vw - 200px) /2);
   z-index: 250;
-  border-radius: 0.8rem 0 0 0.8rem !important;
+  border-radius: 0.8rem !important;
   color: $main_color;
   background: $white;
   border-color: $white;

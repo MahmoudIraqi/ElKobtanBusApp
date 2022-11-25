@@ -6,7 +6,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item" *ngFor="let item of carouselList; let i = index" [ngClass]="{'active': i == 0}">
-      <img [src]="item.imgPath" class="d-block w-100" alt="">
+      <img [src]="item.imgPath" class="d-block w-100" alt="" height="900">
       <div class="carousel-caption d-none d-md-block">
         <h5>{{item.imgTitle[currentLang]}}</h5>
         <p>{{item.imgParagraph[currentLang]}}</p>

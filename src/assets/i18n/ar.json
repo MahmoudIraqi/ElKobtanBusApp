@@ -10,6 +10,10 @@
     "link": "حجز التذاكر",
     "modalTitle": "حجز التذاكر",
     "form": {
+      "radioButton": {
+        "bus": "اتوبيس",
+        "microBus": "تويوتا هايايس"
+      },
       "customerName": "ألاسم",
       "customerPhoneNumber": "رقم الموبايل",
       "fromDate": "سفر من",

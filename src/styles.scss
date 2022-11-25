@@ -50,10 +50,13 @@ input:focus, select:focus {
     }
   }
 
-  .form-group {
-    label {
-      color: $black !important;
-    }
+  label {
+    color: $black !important;
+  }
+
+  .form-check-input:checked {
+    background-color: $main_color;
+    border-color: $main_color;
   }
 
   .btn-primary {

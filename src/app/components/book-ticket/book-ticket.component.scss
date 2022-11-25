@@ -44,3 +44,10 @@
     }
   }
 }
+
+.buttonContainer {
+  .btn-primary {
+    background: $main_color;
+    color: $white;
+  }
+}

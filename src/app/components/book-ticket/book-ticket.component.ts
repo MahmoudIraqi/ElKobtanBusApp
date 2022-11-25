@@ -190,6 +190,7 @@ export class BookTicketComponent implements OnInit, AfterViewInit {
   getFormAsStarting() {
     this.bookTicketForm = this.fb.group({
       oneWay: this.fb.group({
+        busType: this.fb.control(''),
         customerName: this.fb.control('', this.activatedTab ? Validators.required : Validators.nullValidator),
         customerPhoneNumber: this.fb.control('', this.activatedTab ? Validators.required : Validators.nullValidator),
         time: this.fb.control('', this.activatedTab ? Validators.required : Validators.nullValidator),
@@ -199,6 +200,7 @@ export class BookTicketComponent implements OnInit, AfterViewInit {
         passenger: this.fb.control(0, this.activatedTab ? Validators.required : Validators.nullValidator),
       }),
       roundWay: this.fb.group({
+        busType: this.fb.control(''),
         customerName: this.fb.control('', !this.activatedTab && this.activatedTab !== undefined ? Validators.required : Validators.nullValidator),
         customerPhoneNumber: this.fb.control('', !this.activatedTab && this.activatedTab !== undefined ? Validators.required : Validators.nullValidator),
         time: this.fb.control('', !this.activatedTab && this.activatedTab !== undefined ? Validators.required : Validators.nullValidator),
@@ -227,6 +229,24 @@ export class BookTicketComponent implements OnInit, AfterViewInit {
   setTabSelected(event: any) {
     this.activatedTab = document.getElementById('pillsTab')?.children[0].children[0].className.includes('active');
     this.getFormAsStarting();
+  }
+
+  selectedLabel(name: string) {
+    if (this.activatedTab) {
+      this.bookTicketForm.patchValue({
+        oneWay: {
+          busType: name
+        }
+      })
+    } else if (!this.activatedTab && this.activatedTab !== undefined) {
+      this.bookTicketForm.patchValue({
+        roundWay: {
+          busType: name
+        }
+      })
+    }
+
+    console.log('bookTicketForm', this.bookTicketForm.value)
   }
 
 }

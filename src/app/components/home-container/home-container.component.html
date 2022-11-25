@@ -1,7 +1,7 @@
 <div class="appContainer" [dir]="currentLanguage === 'ar' ? 'rtl' : 'ltr'">
   <app-header (selectedLanguage)="changeLang($event)"></app-header>
 
-  <button class="btn btn-primary bookBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <button class="btn btn-primary bookBtn btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
     <span><i class="bi bi-bookmarks"></i></span>
     {{'bookTicket.link' | translate}}
   </button>
@@ -13,7 +13,8 @@
   </div>
 </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+     [dir]="currentLanguage === 'ar' ? 'rtl' : 'ltr'">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">

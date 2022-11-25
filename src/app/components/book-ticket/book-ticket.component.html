@@ -6,27 +6,49 @@
     <div class="col-12 p-0">
       <ul class="nav nav-pills nav-justified mb-3" id="pillsTab" role="tablist" (click)="setTabSelected($event)">
         <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="pills-oneWay-tab" data-bs-toggle="pill" data-bs-target="#pills-oneWay" type="button" role="tab" aria-controls="pills-oneWay" aria-selected="true">
-            {{'bookTicket.tabs.oneWay.'+currentLang | translate}}
+          <button class="nav-link active" id="pills-oneWay-tab" data-bs-toggle="pill" data-bs-target="#pills-oneWay"
+                  type="button" role="tab" aria-controls="pills-oneWay" aria-selected="true">
+            {{'bookTicket.tabs.oneWay.' + currentLang | translate}}
           </button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="pills-roundWay-tab" data-bs-toggle="pill" data-bs-target="#pills-roundWay" type="button" role="tab" aria-controls="pills-roundWay" aria-selected="false">
-            {{'bookTicket.tabs.roundWay.'+currentLang | translate}}
+          <button class="nav-link" id="pills-roundWay-tab" data-bs-toggle="pill" data-bs-target="#pills-roundWay"
+                  type="button" role="tab" aria-controls="pills-roundWay" aria-selected="false">
+            {{'bookTicket.tabs.roundWay.' + currentLang | translate}}
           </button>
         </li>
       </ul>
       <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-oneWay" role="tabpanel" aria-labelledby="pills-oneWay-tab" tabindex="0">
+        <div class="tab-pane fade show active" id="pills-oneWay" role="tabpanel" aria-labelledby="pills-oneWay-tab"
+             tabindex="0">
           <div class="pt-4" formGroupName="oneWay">
             <div class="row m-0 mt-3">
-              <div class="col-12 col-sm-6">
+              <div class="col-12">
+                <label>
+                  <b>{{'bookTicket.form.radioButton.label' | translate}}</b>
+                </label>
+                <div class="form-check form-check-inline mx-2">
+                  <input class="form-check-input" type="radio" name="busTransportation" (click)="selectedLabel('bus')"
+                         id="busTransportation">
+                  <label class="form-check-label" for="busTransportation">
+                    {{'bookTicket.form.radioButton.bus' | translate}}
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="busTransportation" id="microBusTransportation"
+                         (click)="selectedLabel('toyota')">
+                  <label class="form-check-label" for="microBusTransportation">
+                    {{'bookTicket.form.radioButton.microBus' | translate}}
+                  </label>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 mt-3">
                 <div class="form-group">
                   <label>{{'bookTicket.form.customerName' | translate}}</label>
                   <input type="text" class="form-control" formControlName="customerName">
                 </div>
               </div>
-              <div class="col-12 col-sm-6">
+              <div class="col-12 col-sm-6 mt-3">
                 <div class="form-group">
                   <label>{{'bookTicket.form.customerPhoneNumber' | translate}}</label>
                   <input type="number" maxlength="11" class="form-control" formControlName="customerPhoneNumber">
@@ -80,16 +102,36 @@
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="pills-roundWay" role="tabpanel" aria-labelledby="pills-roundWay-tab" tabindex="0">
+        <div class="tab-pane fade" id="pills-roundWay" role="tabpanel" aria-labelledby="pills-roundWay-tab"
+             tabindex="0">
           <div class="pt-4" formGroupName="roundWay">
             <div class="row m-0 mt-3">
-              <div class="col-12 col-sm-6">
+              <div class="col-12">
+                <label>
+                  <b>{{'bookTicket.form.radioButton.label' | translate}}</b>
+                </label>
+                <div class="form-check form-check-inline mx-2">
+                  <input class="form-check-input" type="radio" name="busTransportation" id="busTransportation"
+                         formControlName="busType">
+                  <label class="form-check-label" for="busTransportation">
+                    {{'bookTicket.form.radioButton.bus' | translate}}
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="microBusTransportation" id="microBusTransportation"
+                         formControlName="busType">
+                  <label class="form-check-label" for="microBusTransportation">
+                    {{'bookTicket.form.radioButton.microBus' | translate}}
+                  </label>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 mt-3">
                 <div class="form-group">
                   <label>{{'bookTicket.form.customerName' | translate}}</label>
                   <input type="text" class="form-control" formControlName="customerName">
                 </div>
               </div>
-              <div class="col-12 col-sm-6">
+              <div class="col-12 col-sm-6 mt-3">
                 <div class="form-group">
                   <label>{{'bookTicket.form.customerPhoneNumber' | translate}}</label>
                   <input type="number" maxlength="11" class="form-control" formControlName="customerPhoneNumber">
@@ -170,7 +212,7 @@
         <button
           type="submit"
           [disabled]="!bookTicketForm.valid"
-          class="btn btn-primary btn-md">
+          class="btn btn-primary btn-lg">
           <span>{{'bookTicket.form.submit' | translate}}</span>
         </button>
       </div>

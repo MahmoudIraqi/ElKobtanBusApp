@@ -10,6 +10,11 @@
     "link": "Book Ticket",
     "modalTitle": "Book Ticket",
     "form": {
+      "radioButton": {
+        "label": "Transportation way",
+        "bus": "bus",
+        "microBus": "Toyota Hiace"
+      },
       "customerName": "Name",
       "customerPhoneNumber": "Phone number",
       "fromDate": "From",
