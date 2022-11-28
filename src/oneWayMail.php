@@ -2,6 +2,7 @@
   $postdata = file_get_contents("php://input");
   $request = json_decode($postdata);
 
+  @$busType = $request->busType;
   @$customerName = $request->customerName;
   @$customerPhoneNumber = $request->customerPhoneNumber;
   @$time = $request->time;
@@ -20,10 +21,10 @@
   $headers .= "MIME-Version: 1.0\r\n";
   $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-  $body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
+  $body = "<!DOCTYPE html><html lang='ar'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
   $body .= "<table style='width: 100%;'>";
-  $body .= "<tbody><tr>";
-  $body .= "<td style='border:none;'><strong>Transportation:</strong> {$busType}</td></tr>";
+  $body .= "<tbody>";
+  $body .= "<tr><td style='border:none;'><strong>Transportation:</strong> {$busType}</td></tr>";
   $body .= "<tr><td style='border:none;'><strong>Name:</strong> {$customerName}</td></tr>";
   $body .= "<tr><td style='border:none;'><strong>Phone number:</strong> {$customerPhoneNumber}</td></tr>";
   $body .= "<tr><td style='border:none;'><strong>Departure Time:</strong> {$time}</td></tr>";

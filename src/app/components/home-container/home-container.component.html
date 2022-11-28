@@ -1,11 +1,6 @@
 <div class="appContainer" [dir]="currentLanguage === 'ar' ? 'rtl' : 'ltr'">
   <app-header (selectedLanguage)="changeLang($event)"></app-header>
 
-  <button class="btn btn-primary bookBtn btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    <span><i class="bi bi-bookmarks"></i></span>
-    {{'bookTicket.link' | translate}}
-  </button>
-
   <div class="sectionContainer">
     <div class="whiteContainer">
       <router-outlet #outlet="outlet"></router-outlet>

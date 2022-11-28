@@ -6,7 +6,15 @@
           <img src="assets/img/logo.png" routerLink="/">
         </div>
       </div>
-      <div class="col-lg-10 col-md-8 col-sm-12">
+      <div class="col-lg-6 col-md-4 col-sm-1">
+        <div class="d-flex justify-content-end align-items-center">
+          <button class="btn btn-primary bookBtn btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <span><i class="bi bi-bookmarks"></i></span>
+            {{'bookTicket.link' | translate}}
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
         <div class="rightSection d-flex align-items-center">
           <div class="{{currentLang === 'ar' ? 'mr-auto':'ml-auto'}}">
             <div class="d-flex align-items-center">
