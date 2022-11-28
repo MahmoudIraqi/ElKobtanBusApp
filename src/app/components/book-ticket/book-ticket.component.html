@@ -28,7 +28,7 @@
                   <b>{{'bookTicket.form.radioButton.label' | translate}}</b>
                 </label>
                 <div class="form-check form-check-inline mx-2">
-                  <input class="form-check-input" type="radio" name="busTransportation" (click)="selectedLabel('bus')"
+                  <input class="form-check-input" type="radio" name="busTransportation" (click)="selectedLabel(currentLang ==='en' ?'bus':'اتوبيس')"
                          id="busTransportation">
                   <label class="form-check-label" for="busTransportation">
                     {{'bookTicket.form.radioButton.bus' | translate}}
@@ -36,7 +36,7 @@
                 </div>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="busTransportation" id="microBusTransportation"
-                         (click)="selectedLabel('toyota')">
+                         (click)="selectedLabel( currentLang ==='en' ?'toyota':'تويوتا')">
                   <label class="form-check-label" for="microBusTransportation">
                     {{'bookTicket.form.radioButton.microBus' | translate}}
                   </label>
@@ -111,15 +111,15 @@
                   <b>{{'bookTicket.form.radioButton.label' | translate}}</b>
                 </label>
                 <div class="form-check form-check-inline mx-2">
-                  <input class="form-check-input" type="radio" name="busTransportation" id="busTransportation"
-                         formControlName="busType">
+                  <input class="form-check-input" type="radio" name="busTransportation" (click)="selectedLabel(currentLang ==='en' ?'bus':'اتوبيس')"
+                         id="busTransportation">
                   <label class="form-check-label" for="busTransportation">
                     {{'bookTicket.form.radioButton.bus' | translate}}
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="busTransportation" id="microBusTransportation"
-                         formControlName="busType">
+                         (click)="selectedLabel( currentLang ==='en' ?'toyota':'تويوتا')">
                   <label class="form-check-label" for="microBusTransportation">
                     {{'bookTicket.form.radioButton.microBus' | translate}}
                   </label>

@@ -19,9 +19,9 @@
   $headers = "From: " . $from . "\r\n";
   $headers .= "Reply-To: ". $from . "\r\n";
   $headers .= "MIME-Version: 1.0\r\n";
-  $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+  $headers .= "Content-Type: text/html; charset=utf-8\r\n";
 
-  $body = "<!DOCTYPE html><html lang='ar'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
+  $body = "<!DOCTYPE html><html><head><meta http-equiv='Content-Language' content='en-us'><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><title>Express Mail</title></head><body>";
   $body .= "<table style='width: 100%;'>";
   $body .= "<tbody>";
   $body .= "<tr><td style='border:none;'><strong>Transportation:</strong> {$busType}</td></tr>";
